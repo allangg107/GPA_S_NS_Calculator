@@ -82,6 +82,7 @@ class ClassesLayout(BoxLayout):
         for number in range(0, 3):
             self.add_class()
 
+    # add a class to the given quarter
     def add_class(self):
         classNum = int((len(self.children) + 2) / 3)
         class_label = ClassLabel(text='Class ' + str(classNum))
@@ -108,6 +109,7 @@ class SNSCheck(CheckBox):
 class GPAInput(TextInput):
     pat = re.compile('[^0-9]')
 
+    # filter text to only allow numbers and a single '.'
     def insert_text(self, substring, from_undo=False):
         pat = self.pat
         if '.' in self.text:
