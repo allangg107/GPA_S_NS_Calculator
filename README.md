@@ -8,4 +8,4 @@ Press 'Calculate' to see your impacted grade.
 Colleges are allowing students to change their grading option during extraordinary quarters (due to the pandemic) and 
 this simple app will enable you to more easily see the impact on S/NSing your grade to see if it is worth doing.
 
-Written in python and requires Kivy (pip install kivy).
+Written in Python and requires Kivy (pip install kivy).
