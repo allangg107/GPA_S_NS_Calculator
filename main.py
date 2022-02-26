@@ -26,12 +26,14 @@ class MainGrid(GridLayout):
         global gpa
         numClasses = 0
         gpa = 0
+
         # calculate GPA based on given grades and S/NSs
         for number in range(0, len(classesGPA)):
             if classesSNS[number].active is False and classesGPA[number].text != "":
                 gpa += float(classesGPA[number].text)
                 numClasses += 1
 
+        # avoid division by 0
         if numClasses != 0:
             gpa = gpa / numClasses
 
@@ -50,7 +52,6 @@ class QuartersGrid(GridLayout):
         button.on_press = self.add_quarter
         self.add_widget(button)
 
-        global currQuarter
         # add initial quarters by default
         for number in range(0, 8):
             self.add_quarter()
@@ -79,6 +80,7 @@ class ClassesLayout(BoxLayout):
         button.on_press = self.add_class
         self.add_widget(button)
 
+        # add default number of classes
         for number in range(0, 3):
             self.add_class()
 
