@@ -1,0 +1,68 @@
+MainGrid:
+
+
+<MainGrid>:
+    cols:1
+
+    MainScrollView:
+
+    BoxLayout:
+        id: main_box_layout
+        size_hint: 1, None
+        height: self.height
+
+        Button:
+            text: "Calculate"
+            on_press: root.calculate()
+        Label:
+            id: gpa_label
+            text: "GPA: -1.0"
+
+<MainScrollView>:
+    do_scroll_x: False
+    do_scroll_y: True
+
+    QuartersGrid:
+        size_hint: 1, None
+        height: self.minimum_height
+
+
+<QuartersGrid>:
+    cols: 1
+    size_hint: 1, None
+    height: self.minimum_height
+
+
+<QuarterLabel>:
+    font_size: 24
+    size_hint: 1, None
+    size: self.texture_size
+    text_size: self.size
+
+
+<ClassesLayout>:
+    size_hint: 1, None
+    height: self.minimum_height
+
+
+<ClassLabel>:
+    font_size: 15
+    size_hint: .5, 1
+    size: self.texture_size
+    text_size: self.size
+    valign: 'center'
+    halign: 'right'
+
+
+<SNSCheck>:
+    size_hint: .25, 1
+
+
+<GPAInput>:
+    font_size: 12
+    size_hint: .5, None
+    height: self.minimum_height
+    multiline: False
+    text: ""
+    valign: "top"
+    write_tab: False
