@@ -1,5 +1,5 @@
 # GPA_S_NS_Calculator
-Calculate cumultive GPA based on S/NSed classes.
+Calculate cumultive GPA based on S/NSed (Satisfacotory/Not-Satisfactory, aka, Pass/Fail) classes.
 
 Input your grades, organized by quarter, into the form and press 'Calculate' to see your cumulative GPA.
 Check the checkbox to see how your grade would be impacted by changing your grading option from decimal to S/NS.
